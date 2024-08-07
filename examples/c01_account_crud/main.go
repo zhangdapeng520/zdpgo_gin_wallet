@@ -21,6 +21,7 @@ func main() {
 	r := gin.Default()
 
 	r.POST("/wallet/account/", ginWallet.GetAccountAddHandler(db))
+	r.PUT("/wallet/account/", ginWallet.GetAccountUpdateHandler(db))
 
 	r.Run(":8888")
 }
